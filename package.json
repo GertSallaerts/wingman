@@ -2,7 +2,7 @@
   "name": "wingman",
   "version": "0.1.0",
   "description": "Cross-domain, inter-window pubsub system. Wingman helps you talk to other windows.",
-  "main": "index.js",
+  "main": "dist/wingman.nodeps.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "git stash -k -u && grunt release && git add . && git stash pop"

@@ -5,7 +5,7 @@
     "Gert <gert@gert.gert>"
   ],
   "description": "Cross-domain, inter-window pubsub system. Wingman helps you talk to other windows.",
-  "main": "dist/wingman.min.js",
+  "main": "dist/wingman.nodeps.min.js",
   "moduleType": [
     "amd",
     "globals",

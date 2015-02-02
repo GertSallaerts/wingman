@@ -34,13 +34,27 @@ module.exports = function (grunt) {
 			compile: {
 				options: {
 					optimize: 'none',
-					out: 'dist/wingman.js'
+					out: 'dist/wingman.js',
+					exclude: [ 'eventemitter2' ]
 				}
 			},
 			minify: {
 				options: {
 					optimize: 'uglify',
-					out: 'dist/wingman.min.js'
+					out: 'dist/wingman.min.js',
+					exclude: [ 'eventemitter2' ]
+				}
+			},
+			compile_nodeps: {
+				options: {
+					optimize: 'none',
+					out: 'dist/wingman.nodeps.js'
+				}
+			},
+			minify_nodeps: {
+				options: {
+					optimize: 'uglify',
+					out: 'dist/wingman.nodeps.min.js'
 				}
 			}
 		}

@@ -16,7 +16,7 @@
   ],
   "out": "dist/wingman.js",
   "wrap": {
-    "startFile": "src/wrap.start",
-    "endFile": "src/wrap.end"
+    "startFile": "build/wrap.start",
+    "endFile": "build/wrap.end"
   }
 }

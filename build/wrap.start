@@ -1,0 +1,9 @@
+(function (root, factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD.
+        define(['eventemitter2'], factory);
+    } else {
+        // Browser globals
+        root.Wingman = factory(root.EventEmitter2);
+    }
+}(this, function (EventEmitter2) {
