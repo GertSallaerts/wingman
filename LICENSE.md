@@ -1,5 +1,5 @@
-Copyright (c) Gert Sallaerts
-Copyright (c) Nicolas Gallagher
+Copyright (c) Gert Sallaerts  
+Copyright (c) Nicolas Gallagher  
 Copyright (c) 2009-2011 Øyvind Sean Kinsey, oyvind@kinsey.no
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
