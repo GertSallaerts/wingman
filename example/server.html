@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Hello world</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <p>Hello world, I am your server iframe! I should be running on bubobox2.dev.</p>
+        <button onclick="popup()">popup</button>
+        <div id="messages"></div>
+
+        <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="../node_modules/eventemitter2/lib/eventemitter2.js"></script>
+        <script src="../dist/wingman.js"></script>
+        <script type="text/javascript">
+            var client;
+            function popup () {
+                client.openWindow('popup', 'http://bubobox2.dev/wingman/example/popup.html', {});
+            }
+            
+            client = new Wingman({
+                isMiddleman: true
+            });
+
+            client.subscribe('widget', 'hello', function (origin, event, payload) {
+                $('#messages').append('<p>Hello from widget, with ' + origin + ', ' + event + ', ' + JSON.stringify(payload) + '</p>');
+                console.log('Hello from widget, with', origin, event, payload);
+            });
+            client.subscribe('*', 'hello', function (origin, event, payload) {
+                $('#messages').append('<p>Hello from any, with ' + origin + ', ' + event + ', ' + JSON.stringify(payload) + '</p>');
+                console.log('Hello from any, with', origin, event, payload);
+            });
+            client.subscribe('*', '*', function (origin, event, payload) {
+                $('#messages').append('<p>Any from any, with ' + origin + ', ' + event + ', ' + JSON.stringify(payload) + '</p>');
+                console.log('Any from any, with', origin, event, payload);
+            });
+        </script>
+    </body>
+</html>
