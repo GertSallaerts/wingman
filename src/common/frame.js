@@ -34,6 +34,10 @@ define(['common/util'], function (Util) {
         }
 
         if (window.opener && !frame) {
+            frame = _find([ window.opener ], config.location, config.channel, config.remoteName);
+        }
+
+        if (window.opener && !frame) {
             frame = _find(window.opener.frames, config.location, config.channel, config.remoteName);
         }
 
