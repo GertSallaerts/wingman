@@ -1,0 +1,25 @@
+{
+  "name": "wingman",
+  "version": "0.1.0",
+  "description": "Cross-domain, inter-window pubsub system. Wingman helps you talk to other windows.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "git stash -k -u && grunt release && git add . && git stash pop"
+  },
+  "pre-commit": [
+    "release"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "almond": "^0.3.0",
+    "eventemitter2": "^0.4.14",
+    "grunt": ">=0.4.0",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-watch": "0.2.0",
+    "grunt-requirejs": "^0.4.2",
+    "matchdep": "latest",
+    "pre-commit": "^1.0.2"
+  }
+}

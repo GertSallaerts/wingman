@@ -1,0 +1,32 @@
+{
+  "name": "wingman",
+  "version": "0.1.0",
+  "authors": [
+    "Gert <gert@gert.gert>"
+  ],
+  "description": "Cross-domain, inter-window pubsub system. Wingman helps you talk to other windows.",
+  "main": "dist/wingman.min.js",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "cross",
+    "domain",
+    "pubsub",
+    "communitation",
+    "iframe",
+    "popup",
+    "windows"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

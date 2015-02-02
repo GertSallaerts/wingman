@@ -1,0 +1,10 @@
+{
+    "browser": true,
+    "predef": [ "module", "exports", "define", "require" ],
+    "strict": true,
+    "white": true,
+    "undef": true,
+  	"unused": false,
+    "trailing": true,
+    "camelcase": false
+}
