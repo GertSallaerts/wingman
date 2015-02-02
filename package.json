@@ -5,7 +5,7 @@
   "main": "dist/wingman.nodeps.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "git stash -k -u && grunt release && git add . && git stash pop"
+    "release": "git checkout dist/ && git stash -k -u && grunt release && git add . && git stash pop"
   },
   "pre-commit": [
     "release"
