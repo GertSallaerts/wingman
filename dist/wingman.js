@@ -1100,7 +1100,19 @@ define('wingman',[
             xdm_r: 1
         });
 
-        return window.open(url);
+        options = options || {};
+
+        var title = options.title || '';
+        delete options.title;
+
+        var attributes = [];
+        for (var prop in options) { if (options.hasOwnProperty(prop)) {
+                attributes.push(prop + '=' + options[prop]);
+            }
+        }
+        attributes = attributes.join(', ');
+
+        return window.open(url, title, attributes);
 	};
 
 	window.Wingman = Wingman;
