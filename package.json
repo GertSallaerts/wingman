@@ -1,6 +1,6 @@
 {
   "name": "wingman",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Cross-domain, inter-window pubsub system. Wingman helps you talk to other windows.",
   "main": "dist/wingman.nodeps.min.js",
   "scripts": {
