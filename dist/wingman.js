@@ -1102,8 +1102,8 @@ define('wingman',[
 
         options = options || {};
 
-        var title = options.title || '';
-        delete options.title;
+        var target = options.target || '_blank';
+        delete options.target;
 
         var attributes = [];
         for (var prop in options) { if (options.hasOwnProperty(prop)) {
@@ -1112,7 +1112,7 @@ define('wingman',[
         }
         attributes = attributes.join(', ');
 
-        return window.open(url, title, attributes);
+        return window.open(url, target, attributes);
 	};
 
 	window.Wingman = Wingman;
