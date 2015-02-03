@@ -1057,7 +1057,7 @@ define('wingman',[
 				throw 'Failed to create middleman';
 			}
 
-			if (query.register) {
+			if (config.register || query.register) {
 				this.transport.addTarget(middleman, middleman.location.href);
 			}
 		} else {
