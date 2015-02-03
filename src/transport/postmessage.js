@@ -91,7 +91,9 @@ define(['common/util', 'common/frame'], function (Util, Frame) {
             target.postMessage(message, origin);
         } catch (e) {
             if (Util.isIE()) {
-                target._xdm_postMessage(message, origin);
+                try {
+                    target._xdm_postMessage(message, origin);
+                } catch (e2) { }
             }
         }
     };

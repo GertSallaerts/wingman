@@ -1503,7 +1503,9 @@ define('transports/postmessage',['common/util', 'common/frame'], function (Util,
             target.postMessage(message, origin);
         } catch (e) {
             if (Util.isIE()) {
-                target._xdm_postMessage(message, origin);
+                try {
+                    target._xdm_postMessage(message, origin);
+                } catch (e2) { }
             }
         }
     };
